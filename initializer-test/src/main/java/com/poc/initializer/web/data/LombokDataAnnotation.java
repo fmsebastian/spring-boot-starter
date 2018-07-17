@@ -2,11 +2,13 @@ package com.poc.initializer.web.data;
 
 import lombok.*;
 
-@AllArgsConstructor
 @Builder
 @Data
 public class LombokDataAnnotation {
+
+    @NonNull
     private final String name;
+    @NonNull
     private final String id;
 
     private Integer creditCard;

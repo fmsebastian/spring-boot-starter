@@ -1,0 +1,48 @@
+{
+  "calculationResult": {
+    "calcInfo": "${load:calcInfoTemplate}",
+    "vehicleInfo": "${load:vehicleInfoTemplate}",
+    "...": "load:..",
+    "explanatoryTexts": [
+      "optional:calculationResult.explanatoryText.text1",
+      "optional:calculationResult.explanatoryText.text2"
+    ],
+    "additionalTexts-unknown-number": [
+      "listOfSingleElements:calculationResult.calcInfo.explanatoryTexts"
+    ],
+    "vehicleInfo-list-equals": [
+      "listOfBlockElements:calculationResult.vehicleInfo.validModelOptions",
+      {
+        "code": "substitute:code",
+        "description": "substitute:description"
+      }
+    ],
+    "sparePartsInfoLoad": "load:sparePartsInfoStructure",
+    "sparePartsInfo": {
+      "sparePartPriceDate": "substitute:sparePartPrice",
+      "spareParts-ListUnequalsElemets": [
+        "substitute:calculationResult.spareparts.listOfAttributes.Name",
+        "ifexists:calculationResult.spareparts.listOfAttributes.ID",
+        "optional:calculationResult.spareparts.listOfAttributes.otherAttribute"
+      ],
+      "spareParts-ListEqualElements": [
+        "listOfBlockElements:calculationResult.sparePartsInfo.spareParts",
+        {
+          "repairMethod": "substitute:repairmethod",
+          "guideNumber": "substitute:guidenumber",
+          "partDescription": "substitute:description",
+          "partNumber": "substitute:partNumber",
+          "additionalInfo": {
+            "kmMutationE2IWorkUnitComparision": {
+              "value": "substitute:additionalInfo.kmMutation.value",
+              "relative": "literal:false"
+            },
+            "kmMutationE2ICost": "substitute:additionalInfo.kmMutation.Cost",
+            "partPriceDifference": "getOrDefault:additionalInfo.kmMutation.price:0",
+            "primaryPartReference": "optional:additionalInfo.refference"
+          }
+        }
+      ]
+    }
+  }
+}

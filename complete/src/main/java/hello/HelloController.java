@@ -17,6 +17,4 @@ public class HelloController {
         boolean derivedObjectcheck = DerivedObjectChecks.checkCompareDerivedObjects();
         return "test done: " + derivedObjectcheck;
     }
-
-
 }

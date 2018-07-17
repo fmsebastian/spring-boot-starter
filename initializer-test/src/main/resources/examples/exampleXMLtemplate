@@ -1,0 +1,36 @@
+<template>
+    <test node="1">
+        <id>${json.path1.id}</id>
+        <value>${json.path1.value}</value>
+    </test>
+    <test node="2">
+        <id>${json.path2.id}</id>
+        <value>${json.path2.value}</value>
+    </test>
+    <${tags.1.value} ${tags.1.attributes.attr1.name}=${tags.1.attributes.attr1.name} personal="true">
+        <value>Json tag and attribute origin.</value>
+    </${json.tags.1}>
+
+    This is text in XML file
+    ${json.text.first}
+    <original>
+        This is a json input example that might populate this template:
+        {
+            "json":{
+                "path1":{
+                    "id": "ID-1"
+                    "value": "First value for XML",
+                    "other": "This will not be included"
+                },
+                "path2":{
+                    "id": "ID-2"
+                    "value": "Second value for XML",
+                    "other": "This will not be included"
+                }
+            }
+        }
+        <json>
+            ${#"json:all"} || This will include all json string in the output XML.
+        </json>
+    </original>
+</template>

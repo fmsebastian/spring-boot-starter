@@ -1,0 +1,27 @@
+{
+  "example" : {
+    "simpleTag": "Simple Value",
+    "tagWithAttribute": {
+      "attributes": {
+        "attribute1": "one attribute"
+      },
+      "content": "Value of taggedAttribute"
+    },
+    "closedTag": {
+      "attributes": {
+        "tagAttribute": "none"
+      }
+    },
+    "emptyTag": {
+
+    },
+    "ComplexTag": {
+      "nestedTag": {
+        "attributes" : {
+          "withAttr": "first attribute"
+        },
+        "content": "Inner value"
+      }
+    }
+  }
+}

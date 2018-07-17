@@ -1,0 +1,16 @@
+server.port: 8987
+
+simpleKey: simpleValue
+
+otherMap:
+  oneKey: keyValue
+  twoKey: value2
+
+#simpleList: ['value1', 'value2']
+simpleList:
+    - 'value1'
+    - 'value2'
+#simpleList[0]: value1
+#simpleList[1]: value2
+
+value.property: fuck you

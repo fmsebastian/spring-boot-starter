@@ -1,0 +1,49 @@
+<example>
+    <simpletag>
+        Simple Value
+    </simpletag>
+    <tagWithAttribute attribute1="one attribute">
+        Value of taggedAttribute
+    </tagWithAttribute>
+
+    <closedTag tagAttribute="none"/>
+    <emptyTag />
+
+    <ComplexTag>
+        <nestedTag withAttr="first attribute">
+            Inner value
+        </nestedTag>
+    </ComplexTag>
+    <repetitiveTag>
+        This will be fucking difficult
+    </repetitiveTag>
+    <lists>
+        <simpleList>
+            simple list 1
+        </simpleList>
+        <simpleList>
+            simple list 2
+        </simpleList>
+
+        <list node="1">
+            node list 1
+        </list>
+        <list node="2">
+            node list 2
+        </list>
+        <list>
+            No node
+        </list>
+    </lists>
+    <repetitiveTag>
+        This will be fucking difficult too
+    </repetitiveTag>
+    <repetitiveTag>
+        <innerRepetitiveTag difficulty="hardest">
+            This is impossible
+        </innerRepetitiveTag>
+        <simpleTag>
+            This will be fucking hard
+        </simpleTag>
+    </repetitiveTag>
+</example>
